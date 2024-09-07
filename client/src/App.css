@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.5rem
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+.input-wrapper {
+  background-color: white;
+  width: 60%;
+  border-radius: 10px;
+  height: 2rem;
+  padding: 0 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input-wrapper svg {
+  max-width: 25px;
+
+}
+
+div.post {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* grid-template-columns: 0.9fr 1.1fr; */
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+div.post div.image img {
+  grid-row: 1;
+  grid-column: 1;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  div.post {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 20px;
+  }
+
+  div.image img {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  div.texts {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div.post {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  div.image img {
+    width: 100%;
+  }
+
+  div.post div.texts a h2 {
+    font-size: 1.5rem
+  }
+}
+
+div.post div.texts {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+div.post div.texts h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post p.info {
+  margin: 6px 0;
+  color: #888;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+div.post p.info a.author {
+  color: #333;
+}
+
+div.post p.summary {
+  margin: 10px 0;
+  line-height: 1.5rem;
+}
+
+form.login, form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 8px 7px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc
+}
+
+.formButton {
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.formButton:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #727272;
+}
+
+form.login h1, form.register h1 {
+  text-align: center;
+}
+
+a {
+  cursor: pointer
+}
+
+div.post-page div.image {
+  max-height: 200px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.post-page div.image img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page a {
+  color: #333;
+  text-decoration: underline;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 105;
+}
+
+.createPostLink {
+  background-color: #808080;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff
+}
+
+.createPostLink:hover {
+  background-color: #727272;
+  transition: 0.3s;
+}
+
+.logout {
+  padding-top: 5px;
+  color: rgb(252, 0, 0);
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+div.post-page div.content p {
+  line-height: 1.6rem;
+}
+
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn {
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a svg {
+  height: 20px;
+}
+
+.searchbar {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  gap: 0.5em;
+  alignItems: center;
+  boxShadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justifyContent: start;
+  
+  svg {
+    max-width: 30px;
+  }
+  width: 100%;
+
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.inputSearchbar {
+  width: 100%;
+}
+
+.inputSearchbar:focus {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+}
+
+.remove-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  background-color: red;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 0px;
+
+  svg {
+    height: 20px;
+  }
+}
+
+.deleteBtn:hover {
+  background-color: #8b0a0a;
+  transition: 0.3s;
+}
+
+.btn-container {
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.auth-btn {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.auth-btn:hover {
+  background-color: #333;
+  transition: 0.3s;
+}
